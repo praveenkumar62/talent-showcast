@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranking | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container-fluid">
+
+    <div class="split1 left">
+
+        <div id="sidenav" class="side">
+            <a href="javascript:void(0)" class="closebtn"></a>
+
+            <a href="index.html" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                <span class="name">Dashboard</span> </a>
+
+            <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                <span class="name">Add Admins</span></a>
+                
+            <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                <span class="name">Ranking</span></a>
+
+            <a href="videos.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                <span class="name">Uploaded Videos</span></a>
+
+            <a href="#" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+            <span class="name">Viewed videos</span></a>
+
+            <a href="#" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                <span class="name">Unviewed Videos</span></a>
+        </div>
+
+        <!--Hidden now-->
+      
+        <div id="sidenav" class="side" style="display: none;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+                <a href="#"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+                <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Users</a>
+                <a href="#"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+                <a href="#"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+                <a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+            </div>
+
+    </div>
+
+    <div class="split2 right">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                        <h3>Ranking</h3>
+                    </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                            <div class="search-container">
+                                <input type="text" placeholder=" Search">
+                                <button type="button" class="btn btn-circle">
+                                    <a href="#">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                    </a>
+                                </button>
+                            </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="index.html">
+                                    <span class="fa fa-th-large" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-bell" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 5px; margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-user" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                </div>
+            </nav>
+
+            <div class="container-fluid1">
+                <div class="row">
+                    <div class="list-group">
+                    <div class="list-group-item">
+                        <div class="table-responsive">
+                        <table class="table table-striped table-hover tabled-effect">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Applied for</th>
+                                    <th>View</th>
+                                    <th>No of Votes</th>
+                                    <th>Approval status</th>
+                                    <th>Ranking</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Praveen</td>
+                                    <td>Music Composer</td>
+                                    <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td>
+                                    <td>
+                                        <p>624</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="accepted">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#1</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Anjana</td>
+                                    <td>Aerobics</td>
+                                    <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td>
+                                    <td>
+                                        <p>444</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="rejected">Rejected</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#2</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td>
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="accepted">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
+                                    </td>
+                                </tr>    
+                                <tr>
+                                    <td>Kumar</td>
+                                    <td>Magical stuff</td>
+                                    <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td>
+                                    <td>
+                                        <p>301</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="accepted">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#4</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Siddarath</td>
+                                    <td>Yoga</td>
+                                    <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td>
+                                    <td>
+                                        <p>124</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="rejected">Rejected</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#5</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid-row2">
+                    <div class="panel panel-details">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                <div class="video-panel-box">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe src="https://www.youtube.com/embed/v9GK4Rf6w3A?showinfo=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                                <div class="image">
+                                    <div class="thumbnail img-responsive">
+                                        <img src="praveenkumar.jpg" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6" style="padding-left: 0;">
+                                <h2>Information</h2>
+                                <div class="table-responsive" style="border: none;">
+                                    <table>
+                                        <tr>
+                                            <td id="name">Name: </td>
+                                            <td>Praveen</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="userid">User ID: </td>
+                                            <td>user001</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="applied">Applied for: </td>
+                                            <td>Music Composer</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="email">E-mail: </td>
+                                            <td>praveenkumar7501@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="mobile">Mobile: </td>
+                                            <td>7502650721</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                
+
+            
+    </div>
+</div>
+
+
+
+
+
+
+</body>

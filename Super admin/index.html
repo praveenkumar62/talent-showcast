@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Super Admin</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container-fluid">
+
+    <div class="split1 left">
+
+        <div id="sidenav" class="side">
+            <a href="javascript:void(0)" class="closebtn"></a>
+
+            <a href="#" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                <span class="name">Dashboard</span> </a>
+
+            <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                <span class="name">Add Admins</span></a>
+                
+            <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                <span class="name">Ranking</span></a>
+
+            <a href="videos.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                <span class="name">Uploaded Videos</span></a>
+
+            <a href="#" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+            <span class="name">Viewed videos</span></a>
+
+            <a href="#" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                <span class="name">Unviewed Videos</span></a>
+        </div>
+
+        <!--Hidden now-->
+      
+        <div id="sidenav" class="side" style="display: none;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+                <a href="#"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+                <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Users</a>
+                <a href="#"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+                <a href="#"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+                <a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+            </div>
+
+    </div>
+
+    <div class="split2 right">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                <h3>Administrator Dashboard</h3>
+            </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                    <div class="search-container">
+                        <input type="text" placeholder=" Search">
+                        <button type="button" class="btn btn-circle">
+                            <a href="#">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                            </a>
+                        </button>
+                    </div>
+                    </li>
+                    <li style="margin-top: 20px;">
+                        <div class="container-fluid">
+                            <a href="index.html">
+                            <span class="fa fa-th-large" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li style="margin-top: 20px;">
+                        <div class="container-fluid">
+                            <a href="#">
+                            <span class="fa fa-bell" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li style="margin-right: 5px; margin-top: 20px;">
+                        <div class="container-fluid">
+                            <a href="#">
+                            <span class="fa fa-user" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            
+        </div>
+    </nav>
+
+    <!--1st Row-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <span class="fa fa-clone" aria-hidden="true"></span>
+
+                        <div class="right-corner">
+                            <p id="p1">Space</p>
+                            <p id="p2">49/50GB</p>
+                        </div>
+
+                        <div class="bottom-left">
+                            <p>Get more Space</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <span class="fa fa-money" aria-hidden="true"></span>
+
+                        <div class="right-corner">
+                            <p id="p1">Revenue</p>
+                            <p id="p2">$43,345</p>
+                        </div>
+
+                        <div class="bottom-left">
+                            <p>Last 24,Jan 2019</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <span class="fa fa-info-circle" aria-hidden="true"></span>
+
+                        <div class="right-corner">
+                            <p id="p1">Fixed</p>
+                            <p id="p2">75</p>
+                        </div>
+
+                        <div class="bottom-left">
+                            <p>Tags-info, media</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <span class="fa fa-twitter" aria-hidden="true"></span>
+
+                        <div class="right-corner">
+                            <p id="p1">Followers</p>
+                            <p id="p2">+245</p>
+                        </div>
+
+                        <div class="bottom-left">
+                            <p>Follow others</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+        <!--2nd Row-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="panel panel-default2">
+                    <div class="box">
+
+                            <canvas id="myChart-left" width="auto" height="auto"></canvas>
+
+                        <h4>Registered Participants</h4>
+                        <p>Total number of Participants registered</p>
+                            <hr>
+                        <p id="duration"><span class="fa fa-clock-o" aria-hidden="true"></span>
+                            Updated a minute ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="panel panel-default2">
+                    <div class="box">
+
+                            <canvas id="myChart-center" width="auto" height="auto"></canvas>
+
+                        <h4>Total Visits</h4>
+                        <p>Total number of viewers visited today</p>
+                            <hr>
+                            <p id="duration"><span class="fa fa-clock-o" aria-hidden="true"></span>
+                                Updated a day ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="panel panel-default2">
+                    <div class="box">
+
+                            <canvas id="myChart-right" width="auto" height="auto"></canvas>
+
+                        <h4>Ranking ratio</h4>
+                        <p>Participants who leading today</p>
+                            <hr>
+                        <p id="duration"><span class="fa fa-clock-o" aria-hidden="true"></span>
+                            Updated a hour ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+        <!--3rd Row-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default3">
+                    <div class="panel panel-head1">
+                        <p style="margin-left: 5px;">Tasks: </p>
+                        <p class="p-tab">BUGS
+                            <i class="fa fa-bug" aria-hidden="true"></i>
+                        </button>
+                        <p class="p-tab">WEBSITE
+                            <i class="fa fa-tag" aria-hidden="true"></i>
+                        </button>
+                        <p class="p-tab">SERVER
+                            <i class="fa fa-server" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <input type="checkbox">
+                            <p>Check the video link is working</p>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" class="btn btn1">
+                                <span class="fa fa-pencil" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <input type="checkbox">
+                            <p>Check the video link is working</p>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" class="btn btn1">
+                                <span class="fa fa-pencil" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <input type="checkbox">
+                            <p>Check the video link is working</p>     
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" class="btn btn1">
+                                <span class="fa fa-pencil" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <input type="checkbox">
+                            <p>Check the video link is working</p>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" class="btn btn1">
+                                <span class="fa fa-pencil" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <input type="checkbox">
+                            <p>Check the video link is working</p>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                            <button type="button" class="btn btn1">
+                                <span class="fa fa-pencil" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel panel-default3">
+
+                    <div class="panel panel-head2">
+                        <p>Participant Status</p>
+                    </div>
+                        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Applied for</th>
+                                    <th>Votes</th>
+                                    <th>Applied on</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Praveenkumar.C</td>
+                                    <td>Music Composer</td>
+                                    <td>854</td>
+                                    <td>20, Jan 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>Shankar.M</td>
+                                    <td>Dance</td>
+                                    <td>784</td>
+                                    <td>2, Jan 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>Vignesh.D</td>
+                                    <td>Singer</td>
+                                    <td>532</td>
+                                    <td>22, Jan 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>Sridhar.S</td>
+                                    <td>Yoga</td>
+                                    <td>187</td>
+                                    <td>15, Jan 2019</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<script>
+    // function openNav() 
+    // {
+    //     document.getElementById("sidenav").style.width = "25%";
+    // }
+
+    // function closeNav() 
+    // {
+    //     document.getElementById("sidenav").style.width = "0";
+    // }
+
+
+var ctx = document.getElementById("myChart-left").getContext('2d');
+var myChartleft = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+        datasets: [{
+            label: '# of new user',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+var ctx = document.getElementById("myChart-center").getContext('2d');
+var myChartcenter = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+        datasets: [{
+            label: '# of new user',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 153, 102, 0.8)',
+                'rgba(255, 51, 153, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+var ctx = document.getElementById("myChart-right").getContext('2d');
+var myChartright = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
+        datasets: [{
+            label: '# of new user',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>

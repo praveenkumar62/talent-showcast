@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Admin Details</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container-fluid">
+
+    <div class="split1 left">
+
+        <div id="sidenav" class="side">
+            <a href="javascript:void(0)" class="closebtn"></a>
+
+            <a href="index.html" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                <span class="name">Dashboard</span> </a>
+
+            <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                <span class="name">Add Admins</span></a>
+                
+            <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                <span class="name">Ranking</span></a>
+
+            <a href="videos.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                <span class="name">Uploaded Videos</span></a>
+
+            <a href="#" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+            <span class="name">Viewed videos</span></a>
+
+            <a href="#" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                <span class="name">Unviewed Videos</span></a>
+        </div>
+
+        <!--Hidden now-->
+      
+        <div id="sidenav" class="side" style="display: none;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+                <a href="#"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+                <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Users</a>
+                <a href="#"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+                <a href="#"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+                <a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+            </div>
+
+    </div>
+
+    <div class="split2 right">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                        <h3>Admin Dashboard</h3>
+                    </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                            <div class="search-container">
+                                <input type="text" placeholder=" Search">
+                                <button type="button" class="btn btn-circle">
+                                    <a href="#">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                    </a>
+                                </button>
+                            </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="index.html">
+                                    <span class="fa fa-th-large" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-bell" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 5px; margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-user" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                </div>
+            </nav>
+
+            <div class="panel panel-form">
+                <h3>Add new Administrator</h3>
+                <div class="container-form">
+                    <div class="row form-row">
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <form>   
+                                <div class="form-group input-icons">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <input type="text" name="name" id="name" placeholder="Enter your name" class="form-control">
+                                </div>
+                                <div class="form-group input-icons">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <input type="email" name="email" id="email" placeholder="Enter your Email" class="form-control">
+                                </div>
+                                <div class="form-group input-icons">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                    <input type="text" name="username" id="username" placeholder="Enter your username" class="form-control">
+                                </div>
+                                <div class="form-group input-icons">
+                                    <i class="fa fa-key" aria-hidden="true"></i>
+                                    <input type="password" name="password" id="password" placeholder="Enter your password" class="form-control">
+                                </div>       
+                            </form>
+                        </div>       
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <a href="newadmin2.html">
+                            <button type="button" class="btn btn-next">Next</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
