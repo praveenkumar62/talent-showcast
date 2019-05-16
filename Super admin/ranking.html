@@ -4,9 +4,9 @@
     <title>Ranking | Dashboard</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,27 +28,31 @@
             <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
                 <span class="name">Ranking</span></a>
 
-            <a href="videos.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+            <a href="upload.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
                 <span class="name">Uploaded Videos</span></a>
 
-            <a href="#" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+            <a href="selection.html" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
             <span class="name">Viewed videos</span></a>
 
-            <a href="#" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+            <a href="unviewed.html" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
                 <span class="name">Unviewed Videos</span></a>
+
+            <a href="verification.html" class="list"><span class="fa fa-id-card" aria-hidden="true"></span>
+                <span class="name">Verification</span></a>
         </div>
 
         <!--Hidden now-->
       
         <div id="sidenav" class="side" style="display: none;">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
-                <a href="#"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
-                <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Users</a>
-                <a href="#"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
-                <a href="#"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
-                <a href="#"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
-            </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+            <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Add Admins</a>
+            <a href="ranking.html"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+            <a href="upload.html"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+            <a href="selection.html"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+            <a href="unviewed.html"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+            <a href="verification.html"><span class="fa fa-id-card" aria-hidden="true"></span>Verification</a>
+        </div>
 
     </div>
 
@@ -58,7 +62,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
-                        <h3>Ranking</h3>
+                        <h3>Top Participants</h3>
                     </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
@@ -101,13 +105,13 @@
                 <div class="row">
                     <div class="list-group">
                     <div class="list-group-item">
-                        <div class="table-responsive">
-                        <table class="table table-striped table-hover tabled-effect">
+                        <div class="table-responsive" id="click-reduce-size" style="height: 490px;">
+                        <table class="table table-striped tabled-effect">
                             <thead>
-                                <tr>
+                                <tr class="not-hover">
                                     <th>Name</th>
                                     <th>Applied for</th>
-                                    <th>View</th>
+                                    <!-- <th>View</th> -->
                                     <th>No of Votes</th>
                                     <th>Approval status</th>
                                     <th>Ranking</th>
@@ -117,15 +121,15 @@
                                 <tr>
                                     <td>Praveen</td>
                                     <td>Music Composer</td>
-                                    <td>
+                                    <!-- <td>
                                         <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <p>624</p>
                                     </td>
                                     <td class="centering-td">
                                         <div class="approval-status">
-                                            <p class="accepted">Accepted</p>
+                                            <p class="">Accepted</p>
                                         </div>
                                     </td>
                                     <td>
@@ -135,15 +139,15 @@
                                 <tr>
                                     <td>Anjana</td>
                                     <td>Aerobics</td>
-                                    <td>
+                                    <!-- <td>
                                         <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <p>444</p>
                                     </td>
                                     <td class="centering-td">
                                         <div class="approval-status">
-                                            <p class="rejected">Rejected</p>
+                                            <p class="">Rejected</p>
                                         </div>
                                     </td>
                                     <td>
@@ -153,15 +157,15 @@
                                 <tr>
                                     <td>Rajesh</td>
                                     <td>Dance</td>
-                                    <td>
+                                    <!-- <td>
                                         <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <p>367</p>
                                     </td>
                                     <td class="centering-td">
                                         <div class="approval-status">
-                                            <p class="accepted">Accepted</p>
+                                            <p class="">Accepted</p>
                                         </div>
                                     </td>
                                     <td>
@@ -171,15 +175,15 @@
                                 <tr>
                                     <td>Kumar</td>
                                     <td>Magical stuff</td>
-                                    <td>
+                                    <!-- <td>
                                         <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <p>301</p>
                                     </td>
                                     <td class="centering-td">
                                         <div class="approval-status">
-                                            <p class="accepted">Accepted</p>
+                                            <p class="">Accepted</p>
                                         </div>
                                     </td>
                                     <td>
@@ -189,19 +193,127 @@
                                 <tr>
                                     <td>Siddarath</td>
                                     <td>Yoga</td>
-                                    <td>
+                                    <!-- <td>
                                         <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
-                                    </td>
+                                    </td> -->
                                     <td>
                                         <p>124</p>
                                     </td>
                                     <td class="centering-td">
                                         <div class="approval-status">
-                                            <p class="rejected">Rejected</p>
+                                            <p class="">Rejected</p>
                                         </div>
                                     </td>
                                     <td>
                                         <p>#5</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <!-- <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td> -->
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <!-- <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td> -->
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <!-- <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td> -->
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <!-- <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td> -->
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <!-- <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td> -->
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Rajesh</td>
+                                    <td>Dance</td>
+                                    <!-- <td>
+                                        <button type="button" class="btn btn-view" data-toggle="modal" data-target="#user-view">View</button>
+                                    </td> -->
+                                    <td>
+                                        <p>367</p>
+                                    </td>
+                                    <td class="centering-td">
+                                        <div class="approval-status">
+                                            <p class="">Accepted</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>#3</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -212,7 +324,7 @@
                 </div>
 
                 <div class="container-fluid-row2">
-                    <div class="panel panel-details">
+                    <div class="panel panel-details" id="panel-details" style="display: none;">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                 <div class="video-panel-box">
@@ -269,6 +381,19 @@
 
 
 
+<script>
+    // function displayRank()
+    // {
+    //     document.getElementById('panel-details').style.display="block";
+    // }
 
+    $(document).ready(function() {
+        $('tr').click(function() {
+            $('#panel-details').fadeIn(3000);
+            $('#click-reduce-size').addClass('sliding').css('height','250px');
+        });
+    });
+
+</script>
 
 </body>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Participants Videos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <div class="split1 left">
+
+        <div id="sidenav" class="side">
+            <a href="javascript:void(0)" class="closebtn"></a>
+
+            <a href="index.html" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                <span class="name">Dashboard</span> </a>
+
+            <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                <span class="name">Add Admins</span></a>
+                
+            <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                <span class="name">Ranking</span></a>
+
+            <a href="upload.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                <span class="name">Uploaded Videos</span></a>
+
+            <a href="selection.html" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+            <span class="name">Viewed videos</span></a>
+
+            <a href="unviewed.html" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                <span class="name">Unviewed Videos</span></a>
+
+            <a href="verification.html" class="list"><span class="fa fa-id-card" aria-hidden="true"></span>
+                <span class="name">Verification</span></a>
+        </div>
+
+        <!--Hidden now-->
+        
+        <div id="sidenav" class="side" style="display: none;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+            <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Add Admins</a>
+            <a href="ranking.html"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+            <a href="upload.html"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+            <a href="selection.html"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+            <a href="unviewed.html"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+            <a href="verification.html"><span class="fa fa-id-card" aria-hidden="true"></span>Verification</a>
+        </div>
+
+    </div>
+
+    <div class="split2 right">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                        <h3>All Participants Videos</h3>
+                    </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                            <div class="search-container">
+                                <input type="text" placeholder=" Search">
+                                <button type="button" class="btn btn-circle">
+                                    <a href="#">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                    </a>
+                                </button>
+                            </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="index.html">
+                                    <span class="fa fa-th-large" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-bell" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 5px; margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-user" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                </div>
+            </nav>
+
+            
+
+    </div>
+</div>
+
+</body>
+</html>

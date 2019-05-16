@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Verification</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="split1 left">
+    
+            <div id="sidenav" class="side">
+                <a href="javascript:void(0)" class="closebtn"></a>
+    
+                <a href="index.html" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                    <span class="name">Dashboard</span> </a>
+    
+                <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                    <span class="name">Add Admins</span></a>
+                    
+                <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                    <span class="name">Ranking</span></a>
+    
+                <a href="upload.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                    <span class="name">Uploaded Videos</span></a>
+    
+                <a href="selection.html" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+                <span class="name">Viewed videos</span></a>
+    
+                <a href="unviewed.html" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                    <span class="name">Unviewed Videos</span></a>
+
+                <a href="verification.html" class="list"><span class="fa fa-id-card" aria-hidden="true"></span>
+                    <span class="name">Verification</span></a>
+            </div>
+    
+            <!--Hidden now-->
+            
+            <div id="sidenav" class="side" style="display: none;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+                <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Add Admins</a>
+                <a href="ranking.html"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+                <a href="upload.html"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+                <a href="selection.html"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+                <a href="unviewed.html"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+                <a href="verification.html"><span class="fa fa-id-card" aria-hidden="true"></span>Verification</a>
+            </div>
+    
+        </div>
+    
+        <div class="split2 right">
+    
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                        <h3>Verification</h3>
+                    </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                            <div class="search-container">
+                                <input type="text" placeholder=" Search">
+                                <button type="button" class="btn btn-circle">
+                                    <a href="#">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                    </a>
+                                </button>
+                            </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="index.html">
+                                    <span class="fa fa-th-large" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-bell" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="margin-right: 5px; margin-top: 20px;">
+                                <div class="container-fluid">
+                                    <a href="#">
+                                    <span class="fa fa-user" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <!-- left -->
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+
+                        <h1 class="verification-h1">Verification Process,</h1>
+                        <div class="container-fluid">
+                            <div class="panel panel-verification-left">
+                                <div class="table-responsive" style="max-height: 445px;">
+                                            
+                                    <table class="table">
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Praveenkumar</i> </li>
+                                                        <li>Applied for: <i>Music Composer</i> </li>
+                                                    </ul>
+                                        </div>
+
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Anjana</i> </li>
+                                                        <li>Applied for: <i>Aerobics</i> </li>
+                                                    </ul>
+                                        </div>
+
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Rajesh</i> </li>
+                                                        <li>Applied for: <i>Dance</i> </li>
+                                                    </ul>
+                                        </div>
+
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Kumar</i> </li>
+                                                        <li>Applied for: <i>Magical stuff</i> </li>
+                                                    </ul>
+                                        </div>
+
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Siddarath</i> </li>
+                                                        <li>Applied for: <i>Yoga</i> </li>
+                                                    </ul>
+                                        </div>
+
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Praveenkumar</i> </li>
+                                                        <li>Applied for: <i>Music Composer</i> </li>
+                                                    </ul>
+                                        </div>
+
+                                        <div class="container-verify-box element-box">
+                                                    <ul style="list-style: none;">  
+                                                        <li>Name: <i>Anjana</i> </li>
+                                                        <li>Applied for: <i>Aerobics</i> </li>
+                                                    </ul>
+                                        </div>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- right -->
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="panel panel-verify-right">
+
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-right:0;">
+                                        <div class="photo">
+                                            <img src="praveenkumar.jpg" alt="photo-proof" class="img-responsive" height="280" width="300">
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding-left:0;">
+                                    <div class="document">
+                                        <!-- <img src="document.jpeg" alt="document" class="img-responsive" height="300" width="300"> -->
+                                        <!-- <embed src="training.pdf" width="300" height="280" class="responsive"> -->
+                                            <iframe src="training.pdf"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-7">
+                                    <h2 class="detail-center">Information</h2>
+                                    <div class="table-responsive detail-center" style="border: none;">
+                                        <table>
+                                            <tr>
+                                                <td id="name">Name: </td>
+                                                <td>Praveen</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="userid">User ID: </td>
+                                                <td>user001</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="applied">Applied for: </td>
+                                                <td>Music Composer</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="email">E-mail: </td>
+                                                <td>praveenkumar7501@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="mobile">Mobile: </td>
+                                                <td>7502650721</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-5">
+                                    <table class="center-btn">
+                                        <tr>
+                                            <td>
+                                                <button type="button" class="btn btn-ok">Approve</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button" class="btn btn-notok">Reject</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

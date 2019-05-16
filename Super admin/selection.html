@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selection Stage</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="container-fluid">
+
+    <div class="split1 left">
+
+        <div id="sidenav" class="side">
+            <a href="javascript:void(0)" class="closebtn"></a>
+
+            <a href="index.html" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                <span class="name">Dashboard</span> </a>
+
+            <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                <span class="name">Add Admins</span></a>
+                
+            <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                <span class="name">Ranking</span></a>
+
+            <a href="upload.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                <span class="name">Uploaded Videos</span></a>
+
+            <a href="selection.html" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+            <span class="name">Viewed videos</span></a>
+
+            <a href="unviewed.html" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                <span class="name">Unviewed Videos</span></a>
+
+            <a href="verification.html" class="list"><span class="fa fa-id-card" aria-hidden="true"></span>
+                <span class="name">Verification</span></a>
+        </div>
+
+        <!--Hidden now-->
+      
+        <div id="sidenav" class="side" style="display: none;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+            <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Add Admins</a>
+            <a href="ranking.html"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+            <a href="upload.html"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+            <a href="selection.html"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+            <a href="unviewed.html"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+            <a href="verification.html"><span class="fa fa-id-card" aria-hidden="true"></span>Verification</a>
+        </div>
+
+    </div>
+
+    <div class="split2 right">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                    <h3>Selection Process</h3>
+                </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                        <div class="search-container">
+                            <input type="text" placeholder=" Search">
+                            <button type="button" class="btn btn-circle">
+                                <a href="#">
+                                <span class="fa fa-search" aria-hidden="true"></span>
+                                </a>
+                            </button>
+                        </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="container-fluid">
+                                <a href="index.html">
+                                <span class="fa fa-th-large" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="container-fluid">
+                                <a href="#">
+                                <span class="fa fa-bell" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li style="margin-right: 5px; margin-top: 20px;">
+                            <div class="container-fluid">
+                                <a href="#">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="panel panel-selection-top">
+                <h3>Instructions: </h3>
+                <ul style="list-style: none;">
+                    <li>
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        <p>Before selecting a participant, be sure to check whether it's him or not</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        <p>Check that each participant has provided the correct professional photo</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        <p>Participant who failed to provide a professional photo must be disqualified</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        <p>If the participant in the video is not properly shown his identity, make sure to reject</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        <p>Check whether is he performing the given activity, if not reject him immediately</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="panel panel-selection-bottom">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>User-ID</th>
+                                <th>Applied for</th>
+                                <th>Applied on</th>
+                                <th>Contact-Info</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-responsive" style="height:200px;">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr id="callModal">
+                                <td>Praveenkumar</td>
+                                <td>user001</td>
+                                <td>Music Composer</td>
+                                <td>20, Jan 2019</td>
+                                <td>7554550721</td>
+                            </tr>
+                            <tr id="callModal">
+                                <td>Siddarath</td>
+                                <td>user002</td>
+                                <td>Dance</td>
+                                <td>21, Jan 2019</td>
+                                <td>8502650727</td>
+                            </tr>
+                            <tr id="callModal">
+                                <td>Vignesh Raja</td>
+                                <td>user003</td>
+                                <td>Singer</td>
+                                <td>25, Jan 2019</td>
+                                <td>7332650728</td>
+                            </tr>
+                            <tr id="callModal">
+                                <td>Vignesh</td>
+                                <td>user004</td>
+                                <td>Pianist</td>
+                                <td>25, Jan 2019</td>
+                                <td>9802650729</td>
+                            </tr>
+                            <tr id="callModal">
+                                <td>Sridhar</td>
+                                <td>user005</td>
+                                <td>Magician</td>
+                                <td>28, Jan 2019</td>
+                                <td>982650723</td>
+                            </tr>
+                            <tr id="callModal">
+                                <td>Ramani</td>
+                                <td>user006</td>
+                                <td>Shortfilm Director</td>
+                                <td>2, Feb 2019</td>
+                                <td>8541250267</td>
+                            </tr>
+                            <tr id="callModal">
+                                <td>Kumar</td>
+                                <td>user001</td>
+                                <td>karate</td>
+                                <td>12, Feb 2019</td>
+                                <td>7502650721</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Displaying the Modal -->
+
+        <div class="panel panel-modal modal" id="thisModal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <div class="modal-container">
+                    <div class="row">
+                        <!-- for left-modal -->
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <div class="video-formodal">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe src="https://www.youtube.com/embed/v9GK4Rf6w3A?showinfo=0"></iframe>
+                                </div>
+                            </div>
+                            <div class="left-modal-collapse">
+                                <div class="row" style="padding-left: 100px; padding-right: 100px; margin-top: 15px;">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <button type="button" class="btn btn-modal-ok">
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <button type="button" class="btn btn-modal-notok">
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <textarea name="remark"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- for right-modal -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="modal-photo">
+                                <img src="praveenkumar.jpg" alt="modal-image" class="img-responsive">
+                            </div>
+                            <button type="button" class="btn btn-modal-more">More</button>
+                            <button type="button" class="btn btn-modal-more" style="display: none;">Less</button>
+                            <div class="right-modal-collapse">
+                                <div class="table-responsive" style="border: none;">
+                                    <table>
+                                        <tr>
+                                            <td>Praveen</td>
+                                        </tr>
+                                        <tr>
+                                            <td>user001</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Music Composer</td>
+                                        </tr>
+                                        <tr>
+                                            <td>praveenkumar7501@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7502650721</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById('thisModal');
+    var btn = document.getElementById("callModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() 
+    {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() 
+    {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) 
+    {
+        if (event.target == modal) 
+        {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>

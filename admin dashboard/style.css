@@ -1,0 +1,519 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+}
+
+.split1
+{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    overflow-y: hidden;
+}
+
+.split2
+{
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.left
+{
+    left: 0;
+}
+
+.right
+{
+    right: 0;
+}
+
+.side
+{
+    margin-top: 45px;
+}
+
+.side a
+{
+    text-align: center;
+    padding: 8px 0 8px 0;
+    text-decoration: none;
+    font-size: 15px;
+    color: #6d6a6a;
+    display: block;
+    transition: 0.3s;
+}
+
+.side a span
+{
+    margin-right: 8px;
+}
+
+.side a:hover:not(.closebtn)
+{
+    background-image: linear-gradient(to right, rgb(173, 66, 173),rgb(167, 26, 167)); 
+    color: white;
+    border: none;
+    margin-right: 15px;
+    transition: 0.4s ease-in;
+    box-shadow: 7px 7px 10px rgb(194, 191, 191);
+}
+
+
+@media (max-width: 768px)
+{
+    .side
+    {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(248, 246, 246);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .side a 
+    {
+        text-align: center;
+        padding: 8px 0 8px 0;
+        text-decoration: none;
+        font-size: 15px;
+        color: #6d6a6a;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .side a span
+    {
+        margin-right: 8px;
+    }
+    
+    .side a:hover:not(.closebtn)
+    {
+        background-image: linear-gradient(to right, rgb(173, 66, 173),rgb(167, 26, 167)); 
+        color: white;
+        border: none;
+        margin-right: 15px;
+        transition: 0.4s ease-in;
+        box-shadow: 7px 7px 10px rgb(194, 191, 191);
+    }
+
+}
+
+
+/* Menu icons */
+  
+.side .closebtn 
+{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+.fa-bars
+{
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+
+@media screen and (max-height: 450px) 
+{
+    .side 
+    {
+        padding-top: 15px;
+    }
+    .side a 
+    {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .side a 
+    {
+        text-align: center;
+        padding: 8px 0 8px 0;
+        text-decoration: none;
+        font-size: 10px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+}
+
+
+/*----------------------------------*/
+
+/* navbar */
+.navbar
+{
+    border: none;
+    border-radius: none;
+}
+
+.navbar .navbar-header h3
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.search-container
+{
+    position: relative;
+    margin: 20px 50px 5px 0;
+}
+
+.search-container input
+{
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder
+{
+    text-align: center;
+}
+
+.search-container .btn-circle
+{
+    position: absolute;
+    top: -12px;
+    right: -30px;
+    border: none;
+    padding: 12px 17px;
+    border-radius: 45px;
+}
+
+.search-container .btn-circle:hover
+{
+    color: white;
+    background-color: coral;
+    border: none;
+}
+
+li .fa-bell, li .fa-th-large, li .fa-user
+{
+    font-size: 20px;
+}
+
+li .fa-bell:hover, li .fa-th-large:hover, li .fa-user:hover
+{
+    color: coral;
+}
+
+@media screen and (max-width: 768px)
+{
+    li .fa-bell, li .fa-th-large, li .fa-user
+    {
+        display: none;
+    }
+
+    .search-container
+    {
+        position: relative;
+        margin: 20px 50px 5px 30px;
+        width: 20%;
+    }
+
+    .search-container .btn-circle
+    {
+        position: absolute;
+        top: -12px;
+        left: 150px;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 45px;
+    }
+}
+
+/*----------------------------*/
+
+.panel-default 
+{
+    margin-top: 10px;
+}
+
+.panel-default span.fa
+{
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.panel-default span.fa-clone
+{
+    border: 1px solid orange;
+    background-color: orange;
+    border-radius: 2px;
+    padding: 13px;
+    color: white;
+}
+
+.panel-default span.fa-money
+{
+    border: 1px solid  rgb(5, 172, 5);
+    background-color: rgb(5, 172, 5);
+    border-radius: 2px;
+    padding: 13px;
+    color: white;
+}
+
+.panel-default span.fa-info-circle
+{
+    border: 1px solid rgb(231, 40, 40);
+    background-color: rgb(231, 40, 40);
+    border-radius: 2px;
+    padding: 13px;
+    color: white;
+}
+
+.panel-default span.fa-twitter
+{
+    border: 1px solid rgb(54, 134, 255);
+    background-color: rgb(54, 134, 255);
+    border-radius: 2px;
+    padding: 13px;
+    color: white;
+}
+
+.right-corner
+{
+    width: 40%;
+    right: 50%;
+    transform: translateX(140%);
+    text-align: right;
+    margin-top: -23px; 
+}
+
+.right-corner #p1
+{
+    font-size: 11px;
+}
+
+.right-corner #p2
+{
+    font-size: 17px;
+}
+
+.bottom-left p
+{
+    font-size: 11px;
+    padding-left: 10px;
+}
+
+/*---------------------------*/
+
+.panel-default2
+{
+    margin-bottom: 30px;
+}
+
+.box h4, .box p
+{
+    padding-left: 10px;
+}
+
+.box hr
+{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box p#duration
+{
+    font-size: 10px;
+}
+
+/*--------------------------*/
+
+.panel-head1
+{
+    margin-top: -15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    color: white;
+    background-image: linear-gradient(to right, rgb(172, 62, 172),rgb(143, 9, 143));
+}
+
+.panel-head1 p, .panel-head1 .p-tab
+{
+    position: relative;
+    top: 45%;
+    transform: translateY(10%);
+}
+
+.panel-head1 .p-tab
+{
+    padding: 5px 7px;
+}
+
+.panel-head1 .p-tab:hover
+{
+    border-radius: 3px;
+    background-color: rgb(202, 94, 202);
+    color: white;
+}
+
+input[type="checkbox"], .panel-default3 p
+{
+    padding: 1px;
+    display: inline-block;
+}
+
+input[type="checkbox"]
+{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+button.btn1
+{
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
+    padding: 3px 10px;
+    background-color: white;
+}
+
+/*----------------------------*/
+
+.panel-head2
+{
+    margin-top: -15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 4px;
+    color: white;
+    background-color: orange;
+}
+
+.panel-default3 .table-responsive
+{
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.panel-head2 p
+{
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.navbar
+{
+    border: none;
+    border-radius: none;
+}
+
+.navbar .navbar-header h3
+{
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.search-container
+{
+    position: relative;
+    margin: 20px 50px 5px 0;
+}
+
+.search-container input
+{
+    border-radius: 10px;
+}
+
+::-webkit-input-placeholder
+{
+    text-align: center;
+}
+
+.search-container .btn-circle
+{
+    position: absolute;
+    top: -12px;
+    right: -30px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 45px;
+}
+
+.search-container .btn-circle:hover
+{
+    color: white;
+    background-color: coral;
+    border: none;
+}
+
+li .fa-bell, li .fa-th-large, li .fa-user
+{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+li .fa-bell:hover, li .fa-th-large:hover, li .fa-user:hover
+{
+    color: coral;
+}
+
+@media screen and (max-width: 768px)
+{
+    li .fa-bell, li .fa-th-large, li .fa-user
+    {
+        display: none;
+    }
+
+    .search-container
+    {
+        position: relative;
+        margin: 20px 50px 5px 30px;
+        width: 20%;
+    }
+
+    .search-container .btn-circle
+    {
+        position: absolute;
+        top: -12px;
+        left: 150px;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 45px;
+    }
+}

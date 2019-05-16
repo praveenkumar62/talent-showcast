@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unviewed Videos</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="split1 left">
+    
+            <div id="sidenav" class="side">
+                <a href="javascript:void(0)" class="closebtn"></a>
+    
+                <a href="index.html" class="list"><span class="fa fa-th-large" aria-hidden="true"></span>
+                    <span class="name">Dashboard</span> </a>
+    
+                <a href="newadmin.html" class="list"><span class="fa fa-user-plus" aria-hidden="true"></span>
+                    <span class="name">Add Admins</span></a>
+                    
+                <a href="ranking.html" class="list"><span class="fa fa-star" aria-hidden="true"></span>
+                    <span class="name">Ranking</span></a>
+    
+                <a href="upload.html" class="list"><span class="fa fa-video-camera" aria-hidden="true"></span>
+                    <span class="name">Uploaded Videos</span></a>
+    
+                <a href="selection.html" class="list"><span class="fa fa-eye" aria-hidden="true"></span>
+                <span class="name">Viewed videos</span></a>
+    
+                <a href="unviewed.html" class="list"><span class="fa fa-eye-slash" aria-hidden="true"></span>
+                    <span class="name">Unviewed Videos</span></a>
+
+                <a href="verification.html" class="list"><span class="fa fa-id-card" aria-hidden="true"></span>
+                    <span class="name">Verification</span></a>
+            </div>
+    
+            <!--Hidden now-->
+            
+            <div id="sidenav" class="side" style="display: none;">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html"><span class="fa fa-th-large" aria-hidden="true"></span>Dashboard</a>
+                <a href="newadmin.html"><span class="fa fa-user-plus" aria-hidden="true"></span>Add Admins</a>
+                <a href="ranking.html"><span class="fa fa-star" aria-hidden="true"></span>Ranking</a>
+                <a href="upload.html"><span class="fa fa-video-camera" aria-hidden="true"></span>Uploaded Videos</a>
+                <a href="selection.html"><span class="fa fa-eye" aria-hidden="true"></span>Viewed videos</a>
+                <a href="unviewed.html"><span class="fa fa-eye-slash" aria-hidden="true"></span>Unviewed Videos</a>
+                <a href="verification.html"><span class="fa fa-id-card" aria-hidden="true"></span>Verification</a>
+            </div>
+    
+        </div>
+    
+        <div class="split2 right">
+    
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- <span class="fa fa-bars" aria-hidden="true" onclick="openNav()"></span> -->
+                    <h3>Unviewed Videos</h3>
+                </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                        <div class="search-container">
+                            <input type="text" placeholder=" Search">
+                            <button type="button" class="btn btn-circle">
+                                <a href="#">
+                                <span class="fa fa-search" aria-hidden="true"></span>
+                                </a>
+                            </button>
+                        </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="container-fluid">
+                                <a href="index.html">
+                                <span class="fa fa-th-large" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li style="margin-top: 20px;">
+                            <div class="container-fluid">
+                                <a href="#">
+                                <span class="fa fa-bell" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li style="margin-right: 5px; margin-top: 20px;">
+                            <div class="container-fluid">
+                                <a href="#">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                
+            </div>
+        </nav>
+
+
+        <div class="container-fluid-unview">
+            <div class="row">
+
+                <!--Left side-->
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <div class="panel panel-view">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">    
+                                <div class="video">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe src="https://www.youtube.com/embed/v9GK4Rf6w3A?showinfo=0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <button type="button" id="btn-collapse" class="btn btn-collapse" data-toggle="collapse" data-target="#collapse-info">More</button>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            
+                            </div>
+                        </div>
+                    <div class="collapse" id="collapse-info">
+                        <div class="row">
+                        
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="image">
+                                    <div class="thumbnail img-responsive">
+                                        <img src="praveenkumar.jpg" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="padding-left: 0;">
+                                <h2>Information</h2>
+                                <div class="table-responsive" style="border: none;">
+                                    <table>
+                                        <tr>
+                                            <td id="name">Name: </td>
+                                            <td>Praveen</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="userid">User ID: </td>
+                                            <td>user001</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="applied">Applied for: </td>
+                                            <td>Music Composer</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="email">E-mail: </td>
+                                            <td>praveenkumar7501@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td id="mobile">Mobile: </td>
+                                            <td>7502650721</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="button" class="btn btn-unview-accept">Accept</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="button" class="btn btn-unview-reject">Reject</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
+                </div>
+
+
+                <!--Right side-->
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div class="panel panel-unview-right">
+                        <div class="table-responsive" id="table-drop" style="height: 450px;">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td>Applied for</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Praveenkumar</td>
+                                        <td>Music Composer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SreeKanth</td>
+                                        <td>Classical Dance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ramani</td>
+                                        <td>Mimic</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sridhar</td>
+                                        <td>Folk Dance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vignesh</td>
+                                        <td>Singing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Raja</td>
+                                        <td>Magician</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Siva guru</td>
+                                        <td>Solo Dance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Praveenkumar</td>
+                                        <td>Music Composer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SreeKanth</td>
+                                        <td>Classical Dance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ramani</td>
+                                        <td>Mimic</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sridhar</td>
+                                        <td>Folk Dance</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vignesh</td>
+                                        <td>Singing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Raja</td>
+                                        <td>Magician</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Siva guru</td>
+                                        <td>Solo Dance</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+    </div>
+            
+
+    <script>
+        $(document).ready(function() {
+            $('#btn-collapse').click(function() {
+                $('#table-drop').toggleClass('slidedown').css('height','650px');
+            });
+        });
+    </script>
+</body>
+</html>
